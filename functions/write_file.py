@@ -1,5 +1,6 @@
 
 import os
+from config import MAX_CHARS
 #This function enables the ai to write in the file#
 # If the file or the directory doesnt exists it creates it and overwrites it
 

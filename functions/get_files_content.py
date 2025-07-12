@@ -1,10 +1,10 @@
 
 import os
+from config import MAX_CHARS
 #This functios return the contents of the file to search.
 
 def get_file_content(working_directory, file_path):
-  files_list = []
-  MAX_CHARS = 10000
+
   full_path = os.path.join(working_directory, file_path)
   full_path_abs = os.path.abspath(full_path)
   work_dir_abs_path = os.path.abspath(working_directory)

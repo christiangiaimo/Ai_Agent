@@ -29,6 +29,7 @@ def call_function(function_call_part, verbose=False):
     ],
 )
   result = func(**args)
+  processed_result = str(result) if result is not None else ""
   if verbose:
     print(f"Calling function: {function_call_part.name}({function_call_part.args})")
   else:
@@ -39,7 +40,7 @@ def call_function(function_call_part, verbose=False):
     parts=[
         types.Part.from_function_response(
             name=function_call_part.name,
-            response={"result": result},
+            response={"result": processed_result},
         )
     ],
 )
